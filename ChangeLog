@@ -1,0 +1,103 @@
+-----EtherateMT 1.0 2020-02
+
+[MAJOR] Fixed issue #44; Error handling for Tx/Rx syscalls is incorrect
+
+[MINOR] Fixed issue #39; Move threading out of main()
+
+[MINOR] Fixed issue #38; rand() is never initialized in main()
+
+[FEATURE] Added enhancement #34; Implement CPU pinning and scheduler priority
+
+
+
+-----EtherateMT 0.7 Beta 2018-04
+
+[FEATURE] Added enhancement #33; Implement additional compiler checkes
+
+[MINOR] Fixed issue #32; Valgrind memory leak when invalid CLI arg
+
+[MAJOR] Fixed issue #27; PACKET_MMAP V2, the PACKET_RX_RING is broken
+
+[MINOR] Fixed issue #22; Update documentation for MTU size `-f` option
+
+[MINOR] Fixed issue #19; `PACKET_MMAP` is experiencing a Tx buffer overflow
+
+[MINOR] Fixed issue #17; Close sockets and remove int promisc mode
+
+
+
+-----EtherateMT 0.6 Beta 2018-03
+
+[MINOR] Fixed issue #29; Added check for fclose return value
+
+[MINOR] Fixed issue #28; Incorrect interface selection produced no error
+
+[MINOR] Fixed issue #8; Stats thread starts before the worker thread(s)
+
+[MINOR] Fixed issue #2; Stats are overflowing
+
+[FEATURE] Added enhancement #30; Add a Kernel version check for PACKET_QDISC_BYPASS, TPACKET V2 and V3
+
+[FEATURE] Added enhancement #25; print_pps breakout
+
+[FEATURE] Added enhancement #12; Separate TPACKET v2 and v3 code
+
+[FEATURE] Added enhancement #9; Add -v verbose flag
+
+[FEATURE] Added enhancement #6; Include PACKET_MMAP version in debug output
+
+
+
+-----EtherateMT 0.5 Beta 2018-02
+
+[MINOR] Set send()/read() as deafult packet Tx/Rx modes
+
+[MAJOR] Fixed issue #3; Kernel version check isn't working
+
+[FEATURE] Added enhancement #23; Merge the `sock_op` cases of `S_O_QLEN_*`
+
+[FEATURE] Added enhancement #21; Standardise on PRIuN formatting throughout
+
+[FEATURE] Added enhancement #24; Add travis-CI
+
+[FEATURE] Added CLI args -p1/-p2/-p3 to switch between PACKET_MMAP, sendmsg() and sendmmsg()
+
+
+
+-----EtherateMT 0.4 Beta 2018-01
+
+[FEATURE] Added enhancement #14; Implement recvmsg/sendmsg mode
+
+[FEATURE] Added enhancement #5; Add confirmation when RX hardware timestamping is enabled
+
+[FEATURE] Added enhancement #4; Remove -fstack-protector-all compile flag
+
+[FEATURE] Added enhancement #18; Seperate socket setup into seperate function
+
+
+
+-----EtherateMT 0.3 Alpha 2017-06
+
+[MINOR] Fixed bug in stats fps/Gbps
+
+[MINOR] Cody tidy, seperate code into additional files
+
+
+
+-----EtherateMT 0.2 Alpha 2017-05
+
+[MAJOR] Fixed frame / block / page / ring alignment, Tx was packing one frame per block, now multi-frames per blocks are supported.
+
+[MINOR] Fixed socket sndbuf resize code
+
+
+
+-----EtherateMT 0.1 Alpha 2017-04
+
+[MAJOR] Initial write - very bugy, DO NOT USE!
+
+
+Changelog tags;
+[FEATURE]  == New working feature added to EtherateMT
+[MAJOR]    == Fixed a bug in EtherateMT code that affects the operations of the program or one of the test modes or test results
+[MINOR]    == Fixed a bug that doesn't stop EtherateMT from running properly like typos, formatting, documentation errata, code tidies
